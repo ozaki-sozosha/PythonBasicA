@@ -1,2 +1,1 @@
-# PythonBasicA
-Python基礎A
+# Python基礎A
