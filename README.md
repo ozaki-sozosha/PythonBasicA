@@ -4,10 +4,12 @@
 * JupyterLabの使い方(Notobookとコンソール)
     * [JupyterLabDesktop](https://github.com/jupyterlab/jupyterlab-desktop "Download") 
 * プログラムとデータ型  
-| str(文字列) | 文字列 | school = "創造社デザイン専門学校" |  
-| int(整数) | 小数点を含まなない数値 | schoolup = 1967 |  
-| float(不動小数点) | 小数点を含む数値 | bmi = 25.6 |  
-| bool(真偽値) | 真偽値 | True or False |  
+| データ型        | 解説                    | 例                       | 
+| --------------- | ----------------------- | ------------------------ | 
+| str(ストラ)     | 文字列                  | "創造社デザイン専門学校" | 
+| int(イント)     | 小数点を含まなない数値  | 1967                     | 
+| float(フロート) | 小数点を含む数値        | 25.6                     | 
+| bool(ブール) | 真偽値        | True or False                     | 
 
 * 変数
     * 算術演算子
