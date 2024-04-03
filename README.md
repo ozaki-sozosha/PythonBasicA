@@ -31,7 +31,19 @@
 | ** | べき乗 | 100 ** 2 | 
 
 * 入力と出力
+    * コメント  
+        \# 行末までコメント  
+        """ ~ """複数行コメント
     * print関数、input関数、open関数
+    ```
+    # print関数(画面に出力)
+    print("Python")
+    # input関数(キーボードから入力)
+    data = input("お名前を入力してください>>\n")
+    # open関数(ファイルを開く)
+    with open("data.csv","r",encoding="utf-8") as f:
+        pass
+    
 
 ### コレクション
 * リスト、タプル、辞書
