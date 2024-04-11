@@ -1,9 +1,23 @@
 # Python基礎A
 ## 講義内容
-### 変数とデータ型
-* JupyterLabの使い方(Notobookとコンソール)
-    * [JupyterLabDesktop](https://github.com/jupyterlab/jupyterlab-desktop "Download") 
-* プログラムとデータ型  
+### JupyterLabの使い方(Notobookとコンソール)
+- [JupyterLabDesktop](https://github.com/jupyterlab/jupyterlab-desktop "Download") 
+
+#### 日本語化
+コンソールの入力欄にpip install jupyterlab-language-pack-ja-JPと入力し、実行(SHIFT+RETURN)。  
+日本語ランゲージパックがインストールされます。  
+インストール後「Change and relaod」ボタンをクリック。  
+Settingsメニュー>LanguageにJapanese(Japan)- 日本語(日本)が追加されます。  
+<img src="./images/jupyterlab_tojp.png" width="50%">
+<img src="./images/setJapanese.png" width="50%">
+
+#### 作業ディレクトリの設定
+右上のハンバーガーメニューのSettings>ServerにDefault Working Directoryの項目があります。  
+設定したいディレクトリ(フォルダ)へのPathを入力することでデフォルトの作業ディレクトリを変更出来ます。  
+
+<img src="./images/defaultworkingdir.png" width="50%">
+
+### データ型 
 
 | データ型 | 解説 | 例 |
 | ---------------- | ---------------- | ---------------- |
@@ -54,8 +68,8 @@ print("Python")
 # input関数(キーボードから入力)
 data = input("お名前を入力してください>>\n")
 # open関数(ファイルを開く)
-with open("data.csv","r",encoding="utf-8") as f:
-    pass
+with open("data.txt","w",encoding="utf-8") as f:
+    f.write("Python")
 ```   
 
 ### コレクション
