@@ -73,9 +73,72 @@ with open("data.txt","w",encoding="utf-8") as f:
 ```   
 
 ### コレクション
-* リスト、タプル、辞書
-* リスト関数、辞書関数の使い方
-* 2次元リスト
+#### リスト
+複数のデータを要素としてまとめて取り扱う  
+```
+# リストを定義
+numbers = [0, 10, 20, 30, 40, 50]
+# リストのデータ型を確認
+type(numbers)
+
+# 文字列を要素とするリストを定義
+fruits = ['apple', 'banana', 'chelly']
+
+# indexはゼロから始まる
+fruits[0]
+
+# 要素のスライス
+abcd = ['a', 'b', 'c', 'd']
+abcd[1:3]
+```
+
+#### リスト関数
+```
+# 要素数を数える
+len(numbers)
+
+# 最大値
+max(numbers)
+
+# 最小値
+min(numbers)
+
+# 合計(要素がintやfloatの場合)
+sum(numbers)
+
+# 並べ替え(sort と sorted)
+
+# 新しい要素を末尾に追加
+fruits.append('grape')
+
+# リストにリストを追加
+fruits.extend(['orange','berry'])
+
+# リストに要素を挿入
+fruits.insert(2,'pineapple')
+
+# 要素を指定して削除
+fruits.remove('orange')
+
+# indexを指定して削除(indexを省略すると末尾)
+fruits.pop(3)
+
+# リストのコピー
+new_fruits = fruits.copy()
+new_fruits
+```
+
+#### タプル
+タプルは、リストと同じように複数のデータを取り扱うコレクション。
+ただし、一度設定した要素を変更できません。
+```
+subjects = ("ICT・マーケティング","モノ・コトづくり学科")
+subjects[0]
+
+```
+#### 辞書
+#### 辞書関数
+#### 2次元リスト
 
 ### 条件分岐と繰り返し
 * 条件とbool型(比較演算子)
