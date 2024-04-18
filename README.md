@@ -136,8 +136,37 @@ subjects = ("ICT・マーケティング","モノ・コトづくり学科")
 subjects[0]
 
 ```
-#### 辞書
+#### 辞書(ディクショナリ)
+辞書は、キー (key) と値 (value) を対応づけるデータです。 
+```
+# 辞書を定義
+scores = {'english':76, 'math':66, 'japanese':70, 'biology':58, 'geography':80}
+
+# 要素を取得
+scores['japanese']
+scores.get('japanese')
+
+# 要素を変更
+scores['math'] = 76
+
+# 要素を追加
+scores['music'] = 80
+
+# 要素を削除
+del scores['biology']
+```
+
 #### 辞書関数
+```
+# 全削除
+scores.clear()
+
+# 値の一覧をリストで取得
+scores.values()
+
+# キーの一覧をリストで取得
+scores.keys()
+```
 #### 2次元リスト
 
 ### 条件分岐と繰り返し
