@@ -234,6 +234,22 @@ else:
     print('変数a は 100より大きい値です')
 
 ```
+#### 論理演算子
+| 演算子 | 意味 | 備考 |
+| ---------------- | ---------------- | ---------------- |
+| a < b and a > c | a は b より小さい なおかつ a は c より大きい | 両方True|
+| a < b or a > c | a は b より小さい 又は a は c より大きい | どちらか片方がTrue |
+
+#### in と not
+```
+fruits = ["apple","banana","orange","grape"]
+if "banana" in fruits:
+    print("バナナは果物に含まれます")
+
+if "beans" not in fruit:
+    #not in で含まれない時Trueになる
+    print("豆は果物に含まれません");
+```
 #### While文
 ```
 # while文は条件を満たす間、同じ処理を繰り返す構文。
@@ -282,13 +298,16 @@ for-elseで繰り返し終了時に処理を記述
 list(range(10)) #出力結果 0,1,2,3,4,5,6,7,8,9
 list(range(1,10,2)) #start:1 10未満でステップは2 出力結果 1,3,5,7,9
 ```
-####　enumerate関数
+#### enumerate関数
 enumerate関数を使用すると繰り返し可能なオブジェクトから要素とインデックスを取り出せます
+```
 persons = ['マイケル','ビリー','スティービー','ボブ','シンディ']
 for i, person in enumerate(persons):
     print(f'{i} 番目は{person}です')
+```
 
 ### 関数
+
 * 組込関数とユーザー定義関数
 * 外部ファイル化と読込
 * 標準モジュール(random,datetime,csv)
