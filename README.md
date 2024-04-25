@@ -194,8 +194,18 @@ scores.keys()
 ```
 #比較演算子の計算結果(条件)はbool型
 print(100 > 80)
-
 ```
+Falseとみなされる値  
+- 0 (int型)  
+- 0.0 (float型)  
+- "" (空のstr型)  
+- [] (要素を持たないlist型)  
+- {} (キーも値も持たないdict型)  
+- () (要素を持たないタプルやセット)  
+
+Noneかどうかを判断する
+- is None (Noneの時にTrue)
+- is not None (Noneの時にFalse)
 
 #### 条件分岐
 条件により処理を選択する
