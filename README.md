@@ -317,11 +317,129 @@ for i, person in enumerate(persons):
 ```
 
 ### 関数
+関数とは処理をひとまとめにして記述したもの  
+Pythonが用意しているprint()関数、id()関数を組込関数  
+ユーザーが自分で定義した関数をユーザー定義関数といいます。
 
-* 組込関数とユーザー定義関数
-* 外部ファイル化と読込
-* 標準モジュール(random,datetime,csv)
+#### 関数の構文
 
-### エラー例外制御/考査
-* エラーと例外処理
-* 課題考査(文法の基礎試験)
+def 関数名(引数リスト):  
+&nbsp;&nbsp;&nbsp;&nbsp;処理  
+&nbsp;&nbsp;&nbsp;&nbsp;処理  
+
+Pythonでは処理をブロックで囲まず、インデント(字下げ)で表現します。  
+インデントは半角スペースx4が推奨されています。  
+Pythonに対応しているテキストエディターではTABキーで半角スペースx4が入力されます。
+
+```
+import datetime
+# 関数の定義
+def say_hello():
+    dt_now = datetime.datetime.now()  
+    print(f"今日は{dt_now.strftime('%Y年%m月%d日')}です")
+    print("こんにちは、山田さん")
+# 関数の呼び出し
+say_hello()
+```
+#### 引数と戻り値
+関数内にデータを渡す場合、引数を使います。  
+逆に関数内からデータを取り出す場合は戻り値を使います。
+```
+import datetime
+# 引数リストにnameという変数を渡す
+def say_hello(name):
+    dt_now = datetime.datetime.now()
+    hello = f"今日は{dt_now.strftime('%Y年%m月%d日')}です\n"
+    hello += f"こんにちは、{name}さん" 
+    # 生成した文字列変数helloをプログラムに戻す
+    return hello
+
+hello = say_hello("綾小路")
+print(hello)
+```
+
+#### 関数とスコープ
+変数はグローバル変数(関数の外で宣言した変数)とローカル変数(関数内で宣言した変数)に分けられる。
+
+```
+# グローバル変数は関数内でも呼び出せる
+name = "ウルトラマン"
+def hero():
+    print(name)
+hero()
+
+# グローバル変数は関数内で変更が出来ない
+name = "ウルトラマン"
+def hero2():
+    name = "仮面ライダー"
+    print(name)
+hero2()
+print(name)
+
+# グローバル変数はglobal宣言すると変更可能
+name = "ウルトラマン"
+def hero2():
+    global name
+    name = "仮面ライダー"
+    print(name)
+hero2()
+print(name)
+```
+#### 関数を外部ファイル化
+関数を別ファイルに記載して呼び出して使用する
+
+関数ファイル(function.py)
+```
+import random
+
+# サイコロ
+def dice():
+    return random.randint(1,6)
+```
+
+メインファイル(main.py)
+```
+import function
+
+#サイコロを振る
+num = function.dice()
+print(f"サイコロを振って{num}進みます")
+```
+import文で関数ファイルを呼び出し、function.dice()で関数を実行しています。
+```
+from function import dice
+```
+とdice関数だけをインポートすることも出来ます。
+
+
+### エラーと例外
+ 「エラー」の場合はプログラムで対処できない致命的な例外を指し、「例外」の場合はプログラムで対処できる例外を指します。 
+
+#### エラー
+Pythonのエラー
+| エラーのタイプ | 解説 | 対策 |
+| ---------------- | ---------------- | ---------------- |
+| SyntaxError | 文法や構文の誤り | 正しい文法に修正する |
+| NameError | 宣言していない変数や関数が使用された | 変数の宣言や変数名、関数名を確認 |
+| TypeError | データタイプ(型)誤って使用 | 正しいデータや正しい扱いに修正 |
+| ValueError  | 関数の引数に誤った値を設定 | 引数に正しい値を修正する | 
+| IndentationError  | 関数や繰返し文のインデント処理が正しくない | インデント処理を修正する | 
+| IndexError  | リストの添え字が正しくない | 添え字が要素の無い範囲を指定していないかを確認 | 
+| KeyError  | dictの存在しないキーを呼び出している | 存在するキーを確認 | 
+
+
+#### 例外
+プログラム実行中に発生したエラーを例外といい、例外が発生してもプログラムを終了させずに継続させる方法を例外処理という。
+```
+# 例外処理の例
+try:
+    age = input("年齢を入力してください>>>")
+    age = int(age)
+    print(f"{age}歳ですね")
+except ValueError:
+    print("整数以外が入力されました")
+finally:
+    print("プログラムを終了します")
+```
+tryブロックで例外(エラー)が発生した場合、exceptブロックに処理が移動します。  
+finallyブロックは省略可能で例外(エラー)が発生してもしなくても実行されます。 
