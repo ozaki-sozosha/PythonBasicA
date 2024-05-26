@@ -262,6 +262,7 @@ if "beans" not in fruit:
 ```
 #### While文
 <img src="images/railB.jpg">
+
 ```
 # while文は条件を満たす間、同じ処理を繰り返す構文。
 c = 0
