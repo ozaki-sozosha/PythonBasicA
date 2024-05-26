@@ -208,8 +208,8 @@ Noneかどうかを判断する
 - is not None (Noneの時にFalse)
 
 #### 条件分岐
-条件により処理を選択する
-
+条件により処理を選択する  
+<img src="images/r_12.jpg">
 ```
 # 条件がTrueになる場合、インデント内の処理を実行する
 a = 80
@@ -261,6 +261,7 @@ if "beans" not in fruit:
     print("豆は果物に含まれません");
 ```
 #### While文
+<img src="images/railB.jpg">
 ```
 # while文は条件を満たす間、同じ処理を繰り返す構文。
 c = 0
